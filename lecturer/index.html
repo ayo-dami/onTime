@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" href="css/styles.css" />
+		<link rel="stylesheet" href="../css/styles.css" />
 
 	</head>
 	<header id="header">
-		<img width="100%"src="img/topheader.png"/>
+		<img width="100%"src="../img/topheader.png"/>
 	</header>
 	<body>
 		<!-- Navigation -->
 		<div class="topnav" id="myTopnav">
-		  <a href="#Student" class="active">Student</a>
+		  <a href="#lecturer" class="active">Lecturer</a>
 		  <a href="#contact">Contact</a>
 		  <a href="#about">About</a>
 		  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -19,11 +19,12 @@
 		</div>
 
 		<!-- <div id="header">Header</div> -->
-		<div id="main" onload="Captcha();">
+		<div id="main" style="margin-top:5px;" onload="Captcha();">
 
 			<table id="main-table">
 				<!-- header -->
 				<tr>
+					<th>Select</th>
 					<th>Day</th>
 					<th>From</th>
 					<th>To</th>
@@ -36,6 +37,20 @@
 				</tr>
 				<!-- body -->
 				<tr>
+
+					<td><input type="checkbox"/></td>
+					<td>Time</td>
+					<td>Time</td>
+					<td>Room Name here</td>
+					<td>Lecturer Name</td>
+					<td>Type of lesson</td>
+					<td>Module Code here</td>
+					<td>Module Name here</td>
+					<td>Group name here</td>
+				</tr>
+				<!-- body -->
+				<tr>
+					<td><input type="checkbox"/></td>
 					<td>Text</td>
 					<td>Time</td>
 					<td>Time</td>
@@ -48,6 +63,7 @@
 				</tr>
 				<!-- body -->
 				<tr>
+					<td><input type="checkbox"/></td>
 					<td>Text</td>
 					<td>Time</td>
 					<td>Time</td>
@@ -60,6 +76,7 @@
 				</tr>
 				<!-- body -->
 				<tr>
+					<td><input type="checkbox"/></td>
 					<td>Text</td>
 					<td>Time</td>
 					<td>Time</td>
@@ -72,6 +89,7 @@
 				</tr>
 				<!-- body -->
 				<tr>
+					<td><input type="checkbox"/></td>
 					<td>Text</td>
 					<td>Time</td>
 					<td>Time</td>
@@ -84,6 +102,7 @@
 				</tr>
 				<!-- body -->
 				<tr>
+					<td><input type="checkbox"/></td>
 					<td>Text</td>
 					<td>Time</td>
 					<td>Time</td>
@@ -96,18 +115,7 @@
 				</tr>
 				<!-- body -->
 				<tr>
-					<td>Text</td>
-					<td>Time</td>
-					<td>Time</td>
-					<td>Room Name here</td>
-					<td>Lecturer Name</td>
-					<td>Type of lesson</td>
-					<td>Module Code here</td>
-					<td>Module Name here</td>
-					<td>Group name here</td>
-				</tr>
-				<!-- body -->
-				<tr>
+					<td><input type="checkbox"/></td>
 					<td>Text</td>
 					<td>Time</td>
 					<td>Time</td>
@@ -131,10 +139,28 @@
 		</button>
 
 		</div>
+		<div id="requestArea">
+			<form id="requestForm">
+
+				<h2>Request Changes to Time slot </h2>
+				<p><input  class="input-style" type="text" placeholder="Request Reason"/></p>
+				<p><select  class="input-style">
+					<option>Class 1</option>
+					<option>Class 2</option>
+					<option>Class 3</option>
+				</select></p>
+				<p><textarea  class="input-style" rows="4" cols="50" placeholder="Further explaination"></textarea></p>
+
+			<button class="submit-button-style">
+				Request change
+			</button>
+		</form>
+		</div>
+
 		<div id="sub">
 		<div id="sub-class">
 
-			<p><img src="img/ntulogo.png" width="100"/>
+			<p><img src="../img/ntulogo.png" width="100"/>
 
 			</p>
 			<!-- <img src="img/ntulogo.png" width="100"/>

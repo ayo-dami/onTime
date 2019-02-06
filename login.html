@@ -1,29 +1,70 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<link rel="stylesheet" href="css/styles.css" />
-	</head>
-	<body>
-	<nav class="shift">
-			<!-- maybe add a nice banner with cool blend of classroom -->
-			<!-- do media queries for mobile and apps -->
-		    <ul>
-		    	<img src="img/ontimelogo.png" width="100"/>
-		      <li><a href="#">Profile</a></li>
-		      <li><a href="#">Help</a></li>
-		      <li><a href="#">Signout</a></li>
-		    </ul>
-	</nav>
-	<div id="login">
-	<h1>Login</h1>
-		<form action="/action_page.php">
-		  <p>Username: <br> <input type="text" name="username"></p>
-		  <p>Password: <br> <input type="password" name="password"></p>
+<head>
+	<link rel="stylesheet" href="css/styles.css" />
+	<script type="text/javascript" src="jquery/jquery-3.2.1.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js\captcha.js"></script>
+</head>
+<body onload="Captcha();">
+<header id="header">
+	<img width="100%"src="img/topheader.png"/>
+</header>
+<div class="topnav" id="myTopnav">
+  <a href="#Login" class="active">Login</a>
+  <a href="#Register">Register</a>
+  <a href="#contact">Contact</a>
+  <a href="#about">About</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+  <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<div id="login">
+<img src="img/ontimelogo.png" width="100"/>
+<form id="" action="">
+	<div id="inner-login">
+  <p>
+	<img style="vertical-align: middle;" src="img/usericon.png" width="29.5" height="33"/>
+	<input class="input-style-icon " type="text" name="username" alt="username" placeholder="Username" required>
+	</p>
+	<p>
+	<img style="vertical-align: middle;" src="img/keyicon.png" width="29.5" height="33"/>
+	<input class="input-style-icon " type="password" name="password" alt="password" placeholder="Password" required>
+	</p>
+	<p>
+	<select  class="input-style"  required>
+		<option value="">Select User Type</option>
+		<option value="student">Student</option>
+		<option value="lecturer">Lecturer</option>
+		<option vale="administrator">Administrator</option>
+	</select>
+			</p>
 		  <!-- captcha here -->
-		  <input type="submit" value="Login">
-		</form>
 
-	</div>
-
+	   	<h1 class="captcha-style" type="text" id="mainCaptcha"></h1>
+	   	<p>
+	   	<input class="input-style"  type="text" id="txtInput" placeholder="Enter Captcha"/>
+			<h4 id="noticeCapt"></h4>
+			</p>
+			<p>
+			<input class="button-style" type="button" value="New Captcha" onClick="Captcha();">
+			<input class="button-style" id="Button1" type="button" value="Check Captcha" onclick="ValidCaptcha();"/>
+			</p>
+		  <input class="submit-button-style" style="width:100%; height:25px;" type="submit" value="Login">
+			</div>
+</form>
+</div>
+<script type="text/javascript" src="js\captcha.js"></script>
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
 	</body>
 </html>
