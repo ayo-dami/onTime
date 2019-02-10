@@ -23,6 +23,12 @@ h1 {
 	width:100%;
 }
 
+#main-admin {
+	margin-left:160px;
+	margin-top:10px;
+
+}
+
 #bottom {
 	left:0;
 	float:left;
@@ -32,6 +38,33 @@ h1 {
 	color:#fff;
 	background-color:#001f3f;
 	text-align: center;
+}
+
+.sidenav {
+  height: 100%;
+  width: 150px;
+  position: fixed;
+
+
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 15px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }
 
 #requestArea {
@@ -250,6 +283,20 @@ nav.shift ul li a:hover:after {
 #inner-login {
 	margin: 0px auto;
 	width:70%;
+}
+
+@media screen and (max-width: 600px)
+{
+	#login {
+		width:100%;
+	}
+}
+
+@media screen and (max-width: 900px)
+{
+	#login {
+		width:100%;
+	}
 }
 
 .captcha-style {
